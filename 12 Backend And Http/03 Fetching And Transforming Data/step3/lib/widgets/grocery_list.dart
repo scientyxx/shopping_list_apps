@@ -26,7 +26,7 @@ class _GroceryListState extends State<GroceryList> {
 
   void _loadItems() async {
     final url = Uri.https(
-        'flutter-prep-default-rtdb.firebaseio.com', 'shopping-list.json');
+        'shoppingapps-5a550-default-rtdb.firebaseio.com', 'shopping-list.json');
     final response = await http.get(url);
     final Map<String, dynamic> listData = json.decode(response.body);
     final List<GroceryItem> _loadedItems = [];

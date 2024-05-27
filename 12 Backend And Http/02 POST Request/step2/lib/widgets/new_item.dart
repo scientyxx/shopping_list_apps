@@ -25,8 +25,8 @@ class _NewItemState extends State<NewItem> {
   void _saveItem() {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
-      final url = Uri.https(
-          'flutter-prep-default-rtdb.firebaseio.com', 'shopping-list.json');
+      final url = Uri.https('shoppingapps-5a550-default-rtdb.firebaseio.com',
+          'shopping-list.json');
       http.post(
         url,
         headers: {

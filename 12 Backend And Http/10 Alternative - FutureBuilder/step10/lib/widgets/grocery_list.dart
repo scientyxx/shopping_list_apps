@@ -28,7 +28,7 @@ class _GroceryListState extends State<GroceryList> {
 
   Future<List<GroceryItem>> _loadItems() async {
     final url = Uri.https(
-        'flutter-prep-default-rtdb.firebaseio.com', 'shopping-list.json');
+        'shoppingapps-5a550-default-rtdb.firebaseio.com', 'shopping-list.json');
 
     final response = await http.get(url);
 
@@ -81,7 +81,7 @@ class _GroceryListState extends State<GroceryList> {
       _groceryItems.remove(item);
     });
 
-    final url = Uri.https('flutter-prep-default-rtdb.firebaseio.com',
+    final url = Uri.https('shoppingapps-5a550-default-rtdb.firebaseio.com',
         'shopping-list/${item.id}.json');
 
     final response = await http.delete(url);
